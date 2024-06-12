@@ -5,3 +5,4 @@ Start project
    ------
 for blogs use
 pros in class
+for routing make /blog, /blog/blog-details
