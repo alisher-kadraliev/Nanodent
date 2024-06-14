@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .transition-all {
+    @apply !duration-300 !ease-in-out;
+  }
+}
+
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Times';
+  src: url('./fonts/times.ttf') format('ttf');
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.times{
+      font-family: 'Times', sans-serif;
+}
+.h2{
+    font-family: 'Times', sans-serif;
+    font-size: 50px;
+}
+.subMenu {
+    opacity: 0;
+      transform: translateY(1rem);
+      visibility: hidden;
+      transition: opacity 200ms, transform 200ms, visibility 200ms;
+}
+.subMenu.open {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+}
+.subMenuMb {
+    opacity: 0;
+      visibility: hidden;
+      height: 0;
+      transition: opacity 200ms, height 200ms;
+}
+.subMenuMb.mb-open {
+      opacity: 1;
+      height: auto;
+      visibility: visible;
+}
