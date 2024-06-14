@@ -28,4 +28,13 @@ mobileMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('mb-open')
 })
 // mobile
+let closeBtnNav = document.getElementById('closeBtnNav')
+let mbContent = document.getElementById('mbContent')
+let openBtnNav = document.getElementById('openBtnNav')
+closeBtnNav.addEventListener('click', () => {
+    mbContent.classList.remove('show')
+})
+openBtnNav.addEventListener('click', () => {
+    mbContent.classList.add('show')
+})
 // nav menu end

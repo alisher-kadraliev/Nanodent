@@ -8,12 +8,14 @@
   <title>Nanodent Centre</title>
   <!-- css -->
   <link href="./css/output.css" rel="stylesheet">
+  <!-- cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/css/intlTelInput.css">
 </head>
 
 <body>
 
-  <header class="" style="background-color: white;">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+  <header class="bg-white">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 mb-10" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">Nanodent Centre</span>
@@ -21,7 +23,8 @@
         </a>
       </div>
       <div class="flex lg:hidden">
-        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <button id="openBtnNav" type="button"
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
           <span class="sr-only">Open main menu</span>
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             aria-hidden="true">
@@ -67,9 +70,11 @@
           </div>
         </div>
 
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900 uppercase">Features</a>
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900 uppercase">Marketplace</a>
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900 uppercase">Company</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900 uppercase">Smile gallery</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900 uppercase">Reviews</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900 uppercase">about</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900 uppercase">blogs</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900 uppercase">contacts</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <div class="flex items-center justify-end pr-16 lg:pr-0">
@@ -102,13 +107,13 @@
         </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden" role="dialog" aria-modal="true">
+    <div id="mbContent" class="lg:hidden hidden" role="dialog" aria-modal="true">
       <!-- Background backdrop, show/hide based on slide-over state. -->
       <div class="fixed inset-0 z-10"></div>
       <div
-        class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-        <div class="flex items-center justify-between">
-          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+        class="fixed  z-50 inset-y-0 right-0 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 bg-white">
+        <div class="flex items-end justify-end">
+          <button id="closeBtnNav" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
             <span class="sr-only">Close menu</span>
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
               aria-hidden="true">
@@ -118,7 +123,7 @@
         </div>
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
-            <div class="space-y-2 py-10" style="background-color: white;">
+            <div class="space-y-2 py-10">
               <div class="-mx-3">
                 <button type="button" id="mobile-menu-btn"
                   class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
@@ -157,7 +162,7 @@
               <div class="flex items-center justify-start pr-16 lg:pr-0">
                 <div class="">
                   <div class="dropdown">
-                    <button onclick="openLangMenu2()"
+                    <button id="dropdown2Toggle"
                       class="dropdown-button rounded py-2 px-6 text-base border-none cursor-pointer flex flex-row items-center justify-center gap-2 font-semibold">
                       <img src="img/lang/tr.svg" class="h-4 aspect-video object-cover pointer-events-none" />
                       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 pointer-events-none" viewBox="0 0 24 24"
@@ -168,7 +173,7 @@
                       </svg>
                     </button>
                     <div id="dropdown2"
-                      class="dropdown-content [&.show]:block translate-y-2 rounded hidden absolute bg-[#f1f1f1] w-[150px] max-w-[260px] overflow-auto shadow-xl z-10">
+                      class="dropdown-content translate-y-2 rounded hidden absolute bg-[#f1f1f1] w-[150px] max-w-[260px] overflow-auto shadow-xl z-10">
                       <a href=""
                         class="text-black flex flex-row items-start justify-start gap-2 py-2 px-4 text-sm hover:bg-[#ddd] font-semibold">
                         <img src="img/lang/en.svg" class="h-4 aspect-video object-cover" alt="English" />
@@ -190,77 +195,38 @@
   </header>
 
   <main>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eos hic expedita deleniti totam voluptas, vel,
-    voluptates laboriosam nihil praesentium porro id, sit necessitatibus minima reprehenderit cum ullam impedit rem?
-    Ipsam tenetur exercitationem architecto dolore perferendis, error repellendus veniam illo eum fugit magnam
-    distinctio quisquam officia, reiciendis odit accusantium assumenda facere explicabo, quaerat sit officiis maxime?
-    Libero assumenda omnis qui accusantium, eaque eos ex quae atque magni, explicabo veritatis enim nostrum praesentium.
-    Fugiat nostrum, beatae, minima voluptate rem excepturi quibusdam iure commodi saepe praesentium ipsa. Natus numquam,
-    rem dolore excepturi ea atque sapiente veniam. Quia enim eos eligendi labore pariatur commodi doloribus molestiae
-    obcaecati, dolorem error dolorum consequatur quidem odio quod quas doloremque! Quidem assumenda commodi iste harum
-    esse architecto, aperiam soluta magni in molestiae, quis repellat eligendi. Ducimus, veniam incidunt? Nam possimus
-    nulla maiores voluptate repudiandae pariatur quia at tempora vel et quasi modi dolore inventore exercitationem
-    voluptatum ut, unde nisi esse adipisci eligendi earum veniam alias error saepe. Quaerat doloremque ducimus expedita,
-    odit natus necessitatibus in dolor. Cupiditate dolorum esse, exercitationem quia architecto odit maxime dolor. Nisi
-    dignissimos, nostrum quia officiis enim illo autem! Explicabo dolores harum quidem tempora, ratione rem maxime
-    blanditiis enim dignissimos distinctio numquam in, neque reiciendis dolor fugit veniam cum expedita fugiat quo!
-    Pariatur quos, maxime quis tempore deserunt, veritatis sed accusamus sit architecto consectetur ullam aperiam
-    voluptas repellat esse velit dolorum dolores. Quia, exercitationem unde. Corrupti officia sint porro minima culpa
-    ipsam repellat vero ratione voluptatem aut amet provident non harum aperiam distinctio magni dignissimos,
-    consectetur repellendus maiores mollitia officiis? Corporis odio voluptatum provident laudantium similique eligendi
-    assumenda tempore minima! Voluptatibus minima deserunt fugiat officiis blanditiis esse, omnis maiores corporis,
-    debitis dicta, ex impedit voluptas! Tempora, illum natus minima repudiandae dolores odio praesentium magni hic
-    molestias excepturi facere nulla pariatur dolore inventore commodi molestiae vel, dicta, vero doloribus reiciendis.
-    Adipisci, officiis architecto! Itaque eveniet, soluta sed animi, sit ab quisquam, porro aspernatur ad ratione beatae
-    atque? Temporibus cum eius earum autem dolores deserunt! Natus dolores error laborum ratione iure quis praesentium
-    aliquid, rerum porro dolore quo. Iure provident voluptas quos magni aliquam id reiciendis beatae eius possimus
-    laudantium voluptatum ipsam, omnis placeat dicta ad. Rerum perferendis asperiores nisi, quaerat expedita quos
-    accusantium reprehenderit tempore ipsam fugiat culpa? Accusamus commodi maxime quisquam praesentium illum nulla enim
-    explicabo fugit adipisci culpa veritatis dolorem aliquam, ducimus eius officia libero? Saepe tenetur aut amet
-    voluptates. Corrupti unde harum architecto culpa laboriosam ullam error veritatis modi, aperiam, repellat ex
-    officiis impedit asperiores similique, aut maxime hic tenetur laborum quis saepe dolorem nulla! Sint quod
-    repellendus animi sequi quia? Fuga perspiciatis dolores laborum rem iure culpa quisquam recusandae facere eum
-    ducimus, accusantium cumque voluptates sed, voluptatem sapiente asperiores beatae hic dicta iusto blanditiis earum
-    incidunt, veniam vel et. Tempore pariatur corrupti possimus quas reiciendis accusamus rem, est hic sint! Et voluptas
-    unde, consequuntur vitae exercitationem in quibusdam, dignissimos voluptatibus dolor necessitatibus vero, iusto
-    distinctio! Qui rem iusto sed delectus incidunt consequatur nobis sint! Voluptas deserunt quis in ipsum ipsam rem,
-    accusantium neque cum aperiam, sed mollitia assumenda. Repellendus iusto, hic quas fuga blanditiis voluptas adipisci
-    vitae, illum reiciendis in tempora. Hic amet illo minima saepe qui consectetur aliquam porro, commodi adipisci
-    eveniet fugiat ullam mollitia et, fugit quae nulla. Nostrum recusandae hic id possimus, aperiam placeat a porro
-    reiciendis dolore, vero, provident voluptas magni! Quia, laborum corrupti cum aperiam cupiditate id minima tenetur
-    repellendus dolore, quaerat temporibus ullam consequatur nihil sunt nostrum architecto dicta ipsa cumque sequi,
-    quidem eos. Iure quod culpa ut modi? Suscipit voluptates atque quo veniam ad nam maiores facere aliquam assumenda
-    est nostrum obcaecati error dolores non culpa mollitia maxime, vitae vero eos sequi veritatis quos tempore ducimus.
-    Provident aliquid, odit expedita, accusamus iusto itaque sint inventore maxime quia, eaque corrupti eum consequatur
-    obcaecati sapiente adipisci officiis. Ipsa voluptatem rem minus, sint velit minima commodi tenetur. Harum facere,
-    neque eveniet earum ipsum labore eius pariatur reiciendis accusantium excepturi placeat porro error facilis ratione
-    et dolore dolores fugiat laboriosam sunt sit quas, expedita dolorem officia? Consectetur nulla itaque fugit, eaque,
-    repellendus, neque similique magnam possimus tempore ullam temporibus atque! Facilis unde sequi alias eveniet rem
-    recusandae earum quisquam. Voluptate iure necessitatibus saepe ipsum, fugiat pariatur harum iusto quo facilis
-    eveniet maiores? Ratione, maiores amet sequi culpa ab molestias blanditiis officia magni eos sunt id nam excepturi
-    maxime sint dolor sit aperiam neque. Animi quod vitae labore repudiandae beatae obcaecati consequatur, quisquam
-    inventore! Earum corrupti, esse aliquid quaerat nobis dolore veniam saepe neque, ipsum aspernatur ipsa fugiat autem
-    suscipit officiis nulla nesciunt quas animi perspiciatis vel ea ut cumque quibusdam? Neque nisi perferendis eius
-    sunt voluptatum, error deleniti dolorem est aliquid, corporis eligendi tempora facere ea cupiditate laborum omnis,
-    impedit magni nam eaque! Dolorum totam quae a illo nostrum necessitatibus consequatur culpa cumque molestias, beatae
-    quibusdam eum dolore autem quaerat. Sunt, ipsum voluptates! Hic corrupti similique quam distinctio eos debitis fugit
-    repellendus expedita ipsam consequatur itaque excepturi facere doloremque sequi inventore, accusantium incidunt
-    dolore, assumenda reprehenderit nesciunt a totam architecto. Eos optio officia inventore assumenda error earum
-    accusamus, animi ipsam omnis veniam. Quos doloremque, sit at veniam tempora veritatis, amet fugiat ratione unde
-    quaerat asperiores, odio vero error quidem minima sed ullam molestiae harum. Veritatis inventore impedit hic. Est,
-    fugiat alias velit repudiandae doloribus quasi ullam vero deserunt doloremque delectus odio dolor veniam et harum
-    iusto quibusdam suscipit magnam repellat quisquam enim ad explicabo? Rem veritatis quasi voluptatem velit quae
-    sapiente dicta. Qui, eos autem tempora libero, impedit accusamus expedita sequi eveniet aliquam ullam odit amet quam
-    quaerat excepturi vitae quasi optio ratione dolores inventore distinctio? Quasi excepturi placeat suscipit, laborum
-    rerum distinctio assumenda quibusdam voluptas, quaerat ut facilis natus, ducimus explicabo earum? Perspiciatis
-    laborum blanditiis consectetur voluptatibus ipsum nobis consequatur, quaerat obcaecati veniam, molestiae enim maxime
-    modi similique aut accusantium deleniti eaque exercitationem aperiam ducimus ab maiores. Illum dolor vel, ipsam
-    obcaecati optio magnam labore quas itaque quaerat corrupti veniam incidunt reiciendis recusandae repudiandae
-    reprehenderit sed asperiores, commodi ipsa natus deserunt saepe iusto! Saepe, culpa maiores.
+    <section>
+      <div
+        class="relative w-full flex justify-start items-end max-lg:flex-col max-lg:justify-center max-lg:items-center max-lg:gap-10">
+        <div class="">
+          <img src="./img/DSC_3707.png" alt="" class="max-md:hidden" />
+        </div>
+        <div class="bg-primary w-[500px] min-w-[500px] max-md:min-w-0 max-sm:w-full">
+          <form action="" class="px-16 py-14 flex flex-col justify-center items-center max-md:px-6">
+            <h2 class="h2 pb-8 text-white max-sm:text-2xl">Contact Form</h2>
+            <input type="text" placeholder="Name" class="py-4 px-5 mb-4 w-full">
+            <input type="text" placeholder="Surname" class="py-4 px-5 mb-4 w-full">
+            <input type="tel" id="phone" placeholder="Phone" class="py-4 px-5 mb-4 w-full">
+            <input type="email" placeholder="email" class="py-4 px-5 mb-4 w-full">
+            <button type="submit"
+              class="bg-black w-full uppercase font-medium text-white py-4 hover:bg-[#fff!important] focus:scale-90 scale-100 transition hover:text-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
   <footer></footer>
   <script src="./js/lang.js"></script>
   <script type="module" src="./js/main.js"></script>
+  <!-- cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/js/intlTelInput.min.js"></script>
+  <script>
+    const input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/js/utils.js",
+      initialCountry: "us"
+    });
+  </script>
 
 </body>
 

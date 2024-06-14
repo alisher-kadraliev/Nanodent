@@ -50,3 +50,19 @@ body {
       height: auto;
       visibility: visible;
 }
+.bg-white{
+  background-color: white;
+}
+.bg-black{
+  background-color: black;
+}
+.show{
+  display: block!important;
+}
+.text-white{
+  color: white;
+}
+.iti{
+  width: 100%;
+  margin-bottom: 15px;
+}
