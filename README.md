@@ -6,7 +6,8 @@ Start project
 for blogs use
 pros in class
 for routing make /blog, /blog/blog-details
-
+for every image use alt description
+hero image for desctop and for mobile
 -----
 opengraph 
 meta tile 
