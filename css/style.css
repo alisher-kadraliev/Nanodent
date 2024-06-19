@@ -64,5 +64,36 @@ body {
 }
 .iti{
   width: 100%;
-  margin-bottom: 15px;
+}
+.bg-gray-main{
+  background-color: #272727;
+  height: 190px;
+}
+.transform-custom{
+transform: translate(0px,40px);
+}
+.section-space{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.swiper-button-next, .swiper-button-prev{
+  color: #aa8d65!important;
+}
+  .section-space-inner{
+  padding-top: 150px;
+  padding-bottom: 40px;
+}
+@media (max-width:768px) {
+  .section-space{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+  .section-space-inner{
+  padding-top: 350px;
+  padding-bottom: 40px;
+}
+.h2{
+    font-family: 'Times', sans-serif;
+    font-size: 40px;
+}
 }
