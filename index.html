@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/css/intlTelInput.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 
 </head>
 
@@ -133,11 +134,13 @@
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-10">
+              <a href="#"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
               <div class="-mx-3">
                 <button type="button" id="mobile-menu-btn"
                   class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   aria-expanded="false">
-                  Product
+                  Treatments
                   <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd"
                       d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
@@ -165,7 +168,17 @@
                 </div>
               </div>
               <a href="#"
-                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Smile
+                Gallery</a>
+              <a href="#"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Smile
+                Reviews</a>
+              <a href="#"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</a>
+              <a href="#"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Blogs</a>
+              <a href="#"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact</a>
             </div>
             <div class="py-6">
               <div class="flex items-center justify-start pr-16 lg:pr-0">
@@ -204,10 +217,19 @@
   </header>
 
   <main>
+    <section class="hidden max-lg:block">
+      <div class="container flex flex-col gap-6 py-20">
+        <h1 class="text-2xl text-primary text-center font-bold">RELIABLE, AFFORDABLE AND GUARANTEED DENTAL SERVICES</h1>
+        <h2 class="text-center text-xl text-[#6b6b6b] times">Everyone deserves to have a beautiful smile.</h2>
+        <a href=""
+          class="mx-auto uppercase border border-primary transition-all py-3 px-8 times rounded-md font-bold hover:bg-primary  hover:text-[#fff!important] focus:scale-90 scale-100">Contact
+          Us</a>
+      </div>
+    </section>
     <section>
       <div
         class="relative w-full flex justify-start items-end max-lg:flex-col max-lg:justify-center max-lg:items-center max-lg:gap-10">
-        <div class="">
+        <div>
           <img src="./img/DSC_3707.png" alt="" class="max-md:hidden" />
         </div>
         <div class="bg-primary w-[500px] min-w-[500px] max-md:min-w-0 max-sm:w-full">
@@ -225,6 +247,9 @@
         </div>
       </div>
     </section>
+    <div>
+      <img src="./img/DSC_3707.png" alt="" class="max-md:block hidden mt-14" />
+    </div>
     <section>
       <div class="container section-space">
         <div class="flex flex-col justify-center items-center text-center gap-10">
@@ -558,7 +583,7 @@
   </main>
   <footer>
     <div class="bg-primary flex justify-center items-center mx-auto max-lg:flex-col">
-      <form action="" class="py-10 flex justify-center gap-5 items-center max-md:px-6">
+      <form action="" class="py-10 flex justify-center gap-5 items-center max-lg:flex-col max-md:px-6">
         <input type="text" placeholder="Name Surname" class="py-4 px-5 w-full">
         <input type="tel" id="phonefooter" placeholder="Phone" class="py-4 px-5 w-full">
         <input type="email" placeholder="Email" class="py-4 px-5 w-full">
@@ -593,9 +618,9 @@
                   <a href="" class="text-white uppercase pb-1  hover:text-primary transition-all">Contact</a>
                 </div>
                 <div class="flex flex-col">
-                  <a href="" class="text-white uppercase pb-1  hover:text-primary transition-all">Treatment</a>
-                  <a href="" class="text-white uppercase pb-1  hover:text-primary transition-all">Smile Gallery</a>
-                  <a href="" class="text-white uppercase pb-1  hover:text-primary transition-all">About</a>
+                  <a href="" class="text-white uppercase pb-1  hover:text-primary transition-all">Experts</a>
+                  <a href="" class="text-white uppercase pb-1  hover:text-primary transition-all">Reviews</a>
+                  <a href="" class="text-white uppercase pb-1  hover:text-primary transition-all">Blogs</a>
                 </div>
               </div>
             </div>
@@ -650,6 +675,113 @@
       </div>
     </div>
   </footer>
+  <div>
+    <div class="" id="">
+      <div class="whatsapp-main">
+        <div type="floating" class="whatsapp-wrapper hide-whatsapp" style="width: 360px;">
+          <div color="rgb(29, 33, 41)" role="button" tabindex="0" class="close_whatsapp"></div>
+          <div class="whatsapp-header">
+            <div size="52" class="support-avatar">
+              <div class="avatar-wrapper">
+                <div class="avatar-img"
+                  style="background-image:url(https://ozaytarim.moonsunum.com/upload/settings/logo-1.webp);"></div>
+              </div>
+            </div>
+            <div class="header-info">
+              <div class="whatsapp-name">OZAY GROUP TARIM</div>
+              <div class="whatsapp-reply-time">Çevrimiçi</div>
+            </div>
+          </div>
+          <div class="whatsapp-background">
+            <div class="whatsapp-message-container">
+              <div class="loading-animation">
+                <div class="dot-pulse"></div>
+              </div>
+              <div class="whatsapp-message-wrapper">
+                <div class="chat-body-wrapper">
+                  <div class="whatsapp-chat-name">OZAY GROUP TARIM</div>
+                  <div class="whatsapp-chat-message">
+                    <div>
+                      <p>deneme</p>
+                    </div>
+                  </div>
+                  <div class="whatsapp-chat-time">16:54</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="https://wa.me/902425027007?text=deneme" title="WhatsApp" class="whatsapp-btn" role="button"
+            target="popup"
+            onclick="window.open('https://wa.me/902425027007?text=deneme','popup','width=700,height=600'); return false;">
+            <svg class="whatsapp-send-icon-small" xmlns="http://www.w3.org/2000/svg" version="1" height="20"
+              viewBox="0 0 90 90">
+              <path
+                d="M90 44a44 44 0 0 1-66 38L0 90l8-24A44 44 0 0 1 46 0c24 0 44 20 44 44zM46 7C25 7 9 24 9 44c0 8 2 15 7 21l-5 14 14-4a37 37 0 0 0 58-31C83 24 66 7 46 7zm22 47l-2-1-7-4-3 1-3 4h-3c-1 0-4-1-8-5-3-3-6-6-6-8v-2l2-2 1-1v-2l-4-8c0-2-1-2-2-2h-2l-3 1c-1 1-4 4-4 9s4 11 5 11c0 1 7 12 18 16 11 5 11 3 13 3s7-2 7-5l1-5z"
+                fill="#FFF" />
+            </svg>
+            <span class="chat-button-text">Whatsapp Sohbet</span>
+          </a>
+          <div style="display: flex; justify-content: center; align-items: center;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <headers>
+    <a style="background-color: #000;" href="javascript:;" class="form-btn-mobile ">
+      We Call You</a>
+    <div class="whatsappx">
+      <div class="whatsapp-popup-button play-btn" id="whatsapp-popup">
+        <div class="whatsapp-button-main">
+          WHATSAPP
+        </div>
+      </div>
+    </div>
+  </headers>
+  <article class="uzmanina-sor-mobil">
+    <div class="uzman-content">
+      <div class="container">
+        <div class="row pt-5-m">
+          <div class="col-md-9">
+            <div class="form-area">
+              <span class="close-btn-form">&times;</span>
+              <form action="" method="post" class="form-mobil">
+                @csrf
+                <div class="form-group">
+                  <input type="text" name="name" placeholder="Name Surname" required>
+                </div>
+                <div class="form-group">
+                  <input id="phonemobile" name="phone" type="tel" placeholder="Phone" required>
+                </div>
+                <div class="form-group">
+                  <input id="email" name="email" type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                  <button type="submit" name="button">Gönder</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-3 mt-3-m">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="white">
+              <path
+                d="M7.25361 18.4944L7.97834 18.917C9.18909 19.623 10.5651 20 12.001 20C16.4193 20 20.001 16.4183 20.001 12C20.001 7.58172 16.4193 4 12.001 4C7.5827 4 4.00098 7.58172 4.00098 12C4.00098 13.4363 4.37821 14.8128 5.08466 16.0238L5.50704 16.7478L4.85355 19.1494L7.25361 18.4944ZM2.00516 22L3.35712 17.0315C2.49494 15.5536 2.00098 13.8345 2.00098 12C2.00098 6.47715 6.47813 2 12.001 2C17.5238 2 22.001 6.47715 22.001 12C22.001 17.5228 17.5238 22 12.001 22C10.1671 22 8.44851 21.5064 6.97086 20.6447L2.00516 22ZM8.39232 7.30833C8.5262 7.29892 8.66053 7.29748 8.79459 7.30402C8.84875 7.30758 8.90265 7.31384 8.95659 7.32007C9.11585 7.33846 9.29098 7.43545 9.34986 7.56894C9.64818 8.24536 9.93764 8.92565 10.2182 9.60963C10.2801 9.76062 10.2428 9.95633 10.125 10.1457C10.0652 10.2428 9.97128 10.379 9.86248 10.5183C9.74939 10.663 9.50599 10.9291 9.50599 10.9291C9.50599 10.9291 9.40738 11.0473 9.44455 11.1944C9.45903 11.25 9.50521 11.331 9.54708 11.3991C9.57027 11.4368 9.5918 11.4705 9.60577 11.4938C9.86169 11.9211 10.2057 12.3543 10.6259 12.7616C10.7463 12.8783 10.8631 12.9974 10.9887 13.108C11.457 13.5209 11.9868 13.8583 12.559 14.1082L12.5641 14.1105C12.6486 14.1469 12.692 14.1668 12.8157 14.2193C12.8781 14.2457 12.9419 14.2685 13.0074 14.2858C13.0311 14.292 13.0554 14.2955 13.0798 14.2972C13.2415 14.3069 13.335 14.2032 13.3749 14.1555C14.0984 13.279 14.1646 13.2218 14.1696 13.2222V13.2238C14.2647 13.1236 14.4142 13.0888 14.5476 13.097C14.6085 13.1007 14.6691 13.1124 14.7245 13.1377C15.2563 13.3803 16.1258 13.7587 16.1258 13.7587L16.7073 14.0201C16.8047 14.0671 16.8936 14.1778 16.8979 14.2854C16.9005 14.3523 16.9077 14.4603 16.8838 14.6579C16.8525 14.9166 16.7738 15.2281 16.6956 15.3913C16.6406 15.5058 16.5694 15.6074 16.4866 15.6934C16.3743 15.81 16.2909 15.8808 16.1559 15.9814C16.0737 16.0426 16.0311 16.0714 16.0311 16.0714C15.8922 16.159 15.8139 16.2028 15.6484 16.2909C15.391 16.428 15.1066 16.5068 14.8153 16.5218C14.6296 16.5313 14.4444 16.5447 14.2589 16.5347C14.2507 16.5342 13.6907 16.4482 13.6907 16.4482C12.2688 16.0742 10.9538 15.3736 9.85034 14.402C9.62473 14.2034 9.4155 13.9885 9.20194 13.7759C8.31288 12.8908 7.63982 11.9364 7.23169 11.0336C7.03043 10.5884 6.90299 10.1116 6.90098 9.62098C6.89729 9.01405 7.09599 8.4232 7.46569 7.94186C7.53857 7.84697 7.60774 7.74855 7.72709 7.63586C7.85348 7.51651 7.93392 7.45244 8.02057 7.40811C8.13607 7.34902 8.26293 7.31742 8.39232 7.30833Z">
+              </path>
+            </svg>
+
+            <div class="sticky-whatsapp">
+              <a href="https://wa.me/{{ str_replace(' ', '', $settings->phone) }}?text=<?=urlencode('Saç Ekimi Fiyatları Hakkında Bilgi Alabilir Miyim?')?>"
+                target="_blank" name="whatsappyapisikalt" id="whatsappyapisikalt" class="whatsappyapisikalt">
+
+                +90 507 316 98 99
+                <br><span>ile iletişime geç!</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -661,6 +793,8 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
 </body>
 
 </html>
