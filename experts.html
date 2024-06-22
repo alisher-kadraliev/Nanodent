@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nanodent Centre</title>
+  <!-- css -->
+  <link href="./css/output.css" rel="stylesheet">
+  <!-- cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/css/intlTelInput.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+</head>
+
+<body>
+
+  <header class="bg-white">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 mb-10" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Nanodent Centre</span>
+          <img class="h-12 w-auto" src="./img/logo.png" alt="logo">
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button id="openBtnNav" type="button"
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="#"
+          class="text-sm font-semibold leading-6 text-gray-900 uppercase transition-all hover:text-primary">home</a>
+        <div class="relative group">
+          <a href="" type="button" id="menuBtn"
+            class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 uppercase group-hover:text-primary transition"
+            aria-expanded="false">
+            Treatments
+            <svg class="h-5 w-5 flex-none text-gray-400 transition-all group-hover:rotate-180 transform"
+              viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+          <div id="subMenu"
+            class="subMenu absolute top-full z-10 overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-primary">
+            <div class="p-4">
+              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                <div class="flex-auto">
+                  <a href="#" class="block font-semibold text-gray-900 hover:text-primary transition-all">
+                    Analytics
+                    <span class="absolute inset-0"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                <div class="flex-auto">
+                  <a href="#" class="block font-semibold text-gray-900 hover:text-primary transition-all">
+                    Analytics
+                    <span class="absolute inset-0"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#"
+          class="text-sm font-semibold leading-6 text-gray-900 uppercase hover:text-primary transition-all">Smile
+          gallery</a>
+        <a href="#"
+          class="text-sm font-semibold leading-6 text-gray-900 uppercase hover:text-primary transition-all">Reviews</a>
+        <a href="#"
+          class="text-sm font-semibold leading-6 text-gray-900 uppercase hover:text-primary transition-all">about</a>
+        <a href="#"
+          class="text-sm font-semibold leading-6 text-gray-900 uppercase hover:text-primary transition-all">blogs</a>
+        <a href="#"
+          class="text-sm font-semibold leading-6 text-gray-900 uppercase hover:text-primary transition-all">contacts</a>
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div class="flex items-center justify-end pr-16 lg:pr-0">
+          <div class="">
+            <div class="dropdown">
+              <button onclick="openLangMenu()"
+                class="dropdown-button rounded py-2 px-6 text-base border-none cursor-pointer flex flex-row items-center justify-center gap-2 font-semibold">
+                <img src="img/lang/tr.svg" class="h-4 aspect-video object-cover pointer-events-none" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 pointer-events-none" viewBox="0 0 24 24"
+                  fill="currentColor">
+                  <path
+                    d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z">
+                  </path>
+                </svg>
+              </button>
+              <div id="dropdown"
+                class="dropdown-content [&.show]:block translate-y-2 rounded hidden absolute bg-[#f1f1f1] w-[150px] max-w-[260px] overflow-auto shadow-xl z-10">
+                <a href=""
+                  class="text-black flex flex-row items-start justify-start gap-2 py-2 px-4 text-sm hover:bg-[#ddd] font-semibold">
+                  <img src="img/lang/en.svg" class="h-4 aspect-video object-cover" alt="English" />
+                  English
+                </a>
+                <a href=""
+                  class="text-black flex flex-row items-start justify-start gap-2 py-2 px-4 text-sm hover:bg-[#ddd] font-semibold">
+                  <img src="img/lang/ru.svg" class="h-4 aspect-video object-cover" alt="Русский" />Русский
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div id="mbContent" class="lg:hidden hidden" role="dialog" aria-modal="true">
+      <!-- Background backdrop, show/hide based on slide-over state. -->
+      <div class="fixed inset-0 z-10"></div>
+      <div
+        class="fixed  z-50 inset-y-0 right-0 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 bg-white">
+        <div class="flex items-end justify-end">
+          <button id="closeBtnNav" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Close menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="space-y-2 py-10">
+              <div class="-mx-3">
+                <button type="button" id="mobile-menu-btn"
+                  class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  aria-expanded="false">
+                  Product
+                  <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                <div class="mt-2 space-y-2 subMenuMb" id="mobile-menu">
+                  <a href="#"
+                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Analytics</a>
+                  <a href="#"
+                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Engagement</a>
+                  <a href="#"
+                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Security</a>
+                  <a href="#"
+                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Integrations</a>
+                  <a href="#"
+                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Automations</a>
+                  <a href="#"
+                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Watch
+                    demo</a>
+                  <a href="#"
+                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact
+                    sales</a>
+                </div>
+              </div>
+              <a href="#"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
+            </div>
+            <div class="py-6">
+              <div class="flex items-center justify-start pr-16 lg:pr-0">
+                <div class="">
+                  <div class="dropdown">
+                    <button id="dropdown2Toggle"
+                      class="dropdown-button rounded py-2 px-6 text-base border-none cursor-pointer flex flex-row items-center justify-center gap-2 font-semibold">
+                      <img src="img/lang/tr.svg" class="h-4 aspect-video object-cover pointer-events-none" />
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 pointer-events-none" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                          d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z">
+                        </path>
+                      </svg>
+                    </button>
+                    <div id="dropdown2"
+                      class="dropdown-content translate-y-2 rounded hidden absolute bg-[#f1f1f1] w-[150px] max-w-[260px] overflow-auto shadow-xl z-10">
+                      <a href=""
+                        class="text-black flex flex-row items-start justify-start gap-2 py-2 px-4 text-sm hover:bg-[#ddd] font-semibold">
+                        <img src="img/lang/en.svg" class="h-4 aspect-video object-cover" alt="English" />
+                        English
+                      </a>
+                      <a href=""
+                        class="text-black flex flex-row items-start justify-start gap-2 py-2 px-4 text-sm hover:bg-[#ddd] font-semibold">
+                        <img src="img/lang/ru.svg" class="h-4 aspect-video object-cover" alt="Русский" />Русский
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="bg-gray-main">
+      <div class="">
+        <h1 class="text-center text-4xl uppercase text-white times" style="padding-top: 40px;">experts</h1>
+      </div>
+      <div class="bg-primary w-3/4 shadow-xl transform-custom flex justify-center items-center mx-auto max-lg:flex-col">
+        <form action="" class="py-10 flex justify-center gap-5 items-center max-md:px-6  max-lg:flex-col">
+          <input type="text" placeholder="Name Surname" class="py-4 px-5 w-full">
+          <input type="tel" id="phonefooter" placeholder="Phone" class="py-4 px-5 w-full">
+          <input type="email" placeholder="Email" class="py-4 px-5 w-full">
+          <button type="submit"
+            class="bg-black w-full uppercase font-medium text-white py-4 hover:bg-[#fff!important] focus:scale-90 scale-100 transition hover:text-primary">Submit</button>
+        </form>
+      </div>
+    </section>
+    <section>
+      <div class="container section-space-inner">
+        <div class="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-8">
+            <a href="expert.html" class=" group">
+              <img src="img/9.webp" class="object-cover group-hover:hidden" alt="">
+              <img src="img/99.webp" class="object-cover group-hover:block hidden" alt="">
+              <h3 class="text-primary text-center pb-4 text-2xl font-medium mt-5">Sait Güllü</h3>
+              <h4 class="text-black text-center uppercase text-lg font-thin">Experts</h4>
+            </a>
+            <a href="" class=" group">
+              <img src="img/9.webp" class="object-cover group-hover:hidden" alt="">
+              <img src="img/99.webp" class="object-cover group-hover:block hidden" alt="">
+              <h3 class="text-primary text-center pb-4 text-2xl font-medium mt-5">Sait Güllü</h3>
+              <h4 class="text-black text-center uppercase text-lg font-thin">Experts</h4>
+            </a>
+            <a href="" class=" group">
+              <img src="img/9.webp" class="object-cover group-hover:hidden" alt="">
+              <img src="img/99.webp" class="object-cover group-hover:block hidden" alt="">
+              <h3 class="text-primary text-center pb-4 text-2xl font-medium mt-5">Sait Güllü</h3>
+              <h4 class="text-black text-center uppercase text-lg font-thin">Experts</h4>
+            </a>
+            <a href="" class=" group">
+              <img src="img/9.webp" class="object-cover group-hover:hidden" alt="">
+              <img src="img/99.webp" class="object-cover group-hover:block hidden" alt="">
+              <h3 class="text-primary text-center pb-4 text-2xl font-medium mt-5">Sait Güllü</h3>
+              <h4 class="text-black text-center uppercase text-lg font-thin">Experts</h4>
+            </a>
+            <a href="" class=" group">
+              <img src="img/9.webp" class="object-cover group-hover:hidden" alt="">
+              <img src="img/99.webp" class="object-cover group-hover:block hidden" alt="">
+              <h3 class="text-primary text-center pb-4 text-2xl font-medium mt-5">Sait Güllü</h3>
+              <h4 class="text-black text-center uppercase text-lg font-thin">Experts</h4>
+            </a>
+            <a href="" class=" group">
+              <img src="img/9.webp" class="object-cover group-hover:hidden" alt="">
+              <img src="img/99.webp" class="object-cover group-hover:block hidden" alt="">
+              <h3 class="text-primary text-center pb-4 text-2xl font-medium mt-5">Sait Güllü</h3>
+              <h4 class="text-black text-center uppercase text-lg font-thin">Experts</h4>
+            </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space relative">
+      <div class="flex max-xl:flex-col h-[700px] max-lg:h-auto gap-10 max-lg:flex-col items-center relative">
+        <div class="z-10 absolute left-32 max-2xl:left-0 max-2xl:relative max-lg:w-full max-lg:h-auto">
+          <iframe class="max-lg:w-full max-lg:h-[400px] w-[600px] h-[500px]"
+            src="https://www.youtube.com/embed/ZJfjpMhBKnQ?si=fGFOJIUW8yKlXoMf" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div
+          class="bg-primary w-2/3 max-xl:w-full h-[600px] absolute right-0 flex justify-center max-2xl:relative max-lg:px-10">
+          <div class="flex flex-col justify-center w-2/3 max-lg:w-full max-2xl:py-10">
+            <h3 class="text-black uppercase pb-10 text-start w-2/3 max-lg:w-full text-2xl">NEVER FEEL ANY PAIN DURING
+              YOUR
+              TREATMENT WITH GENERAL ANESTHESIA</h3>
+            <p class="text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis optio neque porro ex,
+              sed id deleniti similique omnis, totam dignissimos placeat sit consectetur fugiat beatae quasi aliquid,
+              itaque ratione voluptates provident perferendis. Quisquam nulla beatae sint voluptatem unde odit! Cum,
+              nihil magnam iure aspernatur in magni perferendis nulla sequi laudantium!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3191.1044330183136!2d30.636340611902344!3d36.887849862637076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c39103f4385f45%3A0x1cb5ad3d811db235!2zTmFub2RlbnQgQcSfxLF6IHZlIERpxZ8gU2HEn2zEscSfxLEgTWVya2V6aQ!5e0!3m2!1str!2str!4v1718802125082!5m2!1str!2str"
+        class="w-full h-[400px] max-lg:h-auto" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+  <footer>
+    <div class="bg-primary flex justify-center items-center mx-auto max-lg:flex-col">
+      <form action="" class="py-10 flex justify-center gap-5 items-center max-md:px-6 max-lg:flex-col">
+        <input type="text" placeholder="Name Surname" class="py-4 px-5 w-full">
+        <input type="tel" id="phonefooter" placeholder="Phone" class="py-4 px-5 w-full">
+        <input type="email" placeholder="Email" class="py-4 px-5 w-full">
+        <button type="submit"
+          class="bg-black w-full uppercase font-medium text-white py-4 hover:bg-[#fff!important] focus:scale-90 scale-100 transition hover:text-primary">Submit</button>
+      </form>
+    </div>
+    <div class="bg-[#212121]">
+      <div class="container">
+        <div class="flex flex-col gap-10 pt-20 pb-10 max-lg:pb-20">
+          <div class="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-10 justify-between">
+            <div class="flex flex-col gap-8">
+              <a href="">
+                <img src="img/remove/lo.png" class="w-[250px]" alt="Footer Logo">
+              </a>
+              <p class="text-white w-2/3">22 years of dental and hospital
+                management experience,
+                NanoDent Centre Turkey has been
+                designed to become the gateway
+                to the world.</p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <div class="relative flex mb-4">
+                <h2 class="text-primary uppercase text-xl !text-start">Menu</h2>
+                <div class="absolute -bottom-2 h-1 w-20 bg-primary"></div>
+              </div>
+              <div class="flex gap-10">
+                <div class="flex flex-col">
+                  <a href="" class="text-white uppercase pb-1  hover:text-primary transition-all">Treatment</a>
+                  <a href="" class="text-white uppercase pb-1  hover:text-primary transition-all">Smile Gallery</a>
+                  <a href="" class="text-white uppercase pb-1  hover:text-primary transition-all">About</a>
+                  <a href="" class="text-white uppercase pb-1  hover:text-primary transition-all">Contact</a>
+                </div>
+                <div class="flex flex-col">
+                  <a href="" class="text-white uppercase pb-1  hover:text-primary transition-all">Treatment</a>
+                  <a href="" class="text-white uppercase pb-1  hover:text-primary transition-all">Smile Gallery</a>
+                  <a href="" class="text-white uppercase pb-1  hover:text-primary transition-all">About</a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <div class="relative flex mb-4">
+                <h2 class="text-primary uppercase text-xl !text-start">Contact us</h2>
+                <div class="absolute -bottom-2 h-1 w-40 bg-primary"></div>
+              </div>
+              <div class="flex flex-col my-4 text-white">
+                <div class="strong uppercase font-bold">Address:</div>
+                <a href="" class="text-white font-thin  hover:text-primary transition-all" target="_blank">
+                  Akkuyu, Üniversite Caddesi
+                  No:25/EA Konyaaltı</a>
+              </div>
+              <div class="flex flex-col my-4 text-white">
+                <div class="strong uppercase font-bold">Call Directly:</div>
+                <div class="flex flex-col">
+                  <a href="" class="text-white font-extrabold hover:text-primary  transition-all" target="_blank">UK:
+                    <span>+90 543 232 32 23</span></a>
+                  <a href="" class="text-white font-extrabold  hover:text-primary transition-all" target="_blank">BE:
+                    <span>+90 543 232 32 23</span></a>
+                </div>
+              </div>
+              <div class="flex flex-col my-4 text-white">
+                <div class="strong uppercase font-bold">E-mail:</div>
+                <a href="" class="text-white font-thin  hover:text-primary transition-all"
+                  target="_blank">info@gmail</a>
+              </div>
+              <div class="flex flex-col my-4 text-white">
+                <div class="strong uppercase font-bold">Sosyal media:</div>
+                <div class="flex gap-10 mt-4">
+                  <a href="" class="" target="_blank">
+                    <img src="img/Layer 10 copy 4.png" alt="social media">
+                  </a>
+                  <a href="" class="" target="_blank">
+                    <img src="img/Layer 12 copy 4.png" alt="social media">
+                  </a>
+                  <a href="" class="" target="_blank">
+                    <img src="img/Layer 8 copy 4.png" alt="social media">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between items-center max-lg:flex-col border-t border-primary">
+            <div class="text-white max-lg:text-center">© NANODENT CENTRE - All Rights Reserved.</div>
+            <a href="https://moonworkshop.com" target="_blank">
+              <img src="img/moonworkshop_black (1).webp" alt="moonworkshop">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/lang.js"></script>
+  <script type="module" src="./js/main.js"></script>
+
+  <!-- cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/js/intlTelInput.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+</body>
+
+</html>
