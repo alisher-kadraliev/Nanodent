@@ -13,6 +13,7 @@ opengraph
 meta tile 
 meta desc
 blog details add toc(table of content)
+make www to origin 
 ----
 for production
 npx tailwindcss -o build.css --minify
